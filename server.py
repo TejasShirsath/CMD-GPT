@@ -5,8 +5,9 @@ import os
 
 from dotenv import load_dotenv
 load_dotenv()
+#remove this both 6th and 7th line of code
 
-genai.configure(api_key = os.getenv("api_key"))
+genai.configure(api_key = os.getenv("api_key")) #Replace 'os.getenv("api_key")' with your Google Genmi API Key
 
 app = Flask(__name__)
 
