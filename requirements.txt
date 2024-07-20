@@ -1,4 +1,5 @@
 Flask==2.3.3
+flask-cors
 google-generativeai==0.6.0
 urllib3==1.26.16
 python-dotenv
