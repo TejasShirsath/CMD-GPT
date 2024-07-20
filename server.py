@@ -1,6 +1,7 @@
 from flask import Flask, request
 from urllib.parse import unquote
 import google.generativeai as genai
+from flask_cors import CORS
 import os
 
 from dotenv import load_dotenv
@@ -10,6 +11,7 @@ load_dotenv()
 genai.configure(api_key = os.getenv("api_key")) #Replace 'os.getenv("api_key")' with your Google Genmi API Key
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/', methods=['GET'])
 def get_answer():
